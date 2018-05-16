@@ -12,22 +12,22 @@
     <form class="container">
         <fieldset>
             <legend>Dane osobowe</legend>
-            <div class="form-inline">
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-md-6">
                     <label for="fname">Imię:</label>
                     <input type="text" class="form-control" id="fname" placeholder="wpisz imię" minlenght="3" reguired>
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="lname">Nazwisko:</label>
                     <input type="text" class="form-control" id="lname" placeholder="wpisz nazwisko" minlenght="3" reguired>
                 </div>
             </div>
-            <div class="">
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-md-6">
                     <label for="email">E-mail:</label>
                     <input type="email" class="form-control" id="email" required placeholder="your email">
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="phone">Telefon kontaktowy:</label>
                     <input type="phone" class="form-control" id="phone" placeholder="wpisz numer +48..." required>
                 </div>
@@ -35,8 +35,8 @@
         </fieldset>
         <fieldset>
             <legend>Szczegóły rezerwacji</legend>
-            <div class="">
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-md-6">
                     <label for="city">Miasto:</label>
                     <select id="city" class="form-control" aria-placeholder="wybierz z listy">
                         <option disabled selected>wybierz z listy</option>
@@ -50,17 +50,17 @@
                         <option value="wrocław">Wrocław</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="person">Liczba osób:</label>
                     <input type="number" class="form-control" id="person" min="1" max="10" step="1" placeholder="max. 10" />
                 </div>
             </div>
-            <div class="">
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-md-6">
                     <label for="start-date">Data przybycia:</label>
                     <input type="date" class="form-control" id="start-date">
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="end-date">Data wyjazdu:</label>
                     <input type="date" class="form-control" id="end-date">
                 </div>
@@ -69,30 +69,32 @@
 
         <fieldset>
             <legend>Rozliczenie</legend>
-            <div class="">
-                <div class="check-box">
+            <div class="row">
+                <div class="check-box col-md-6">
                     <label>
-                        <input type="checkbox"  name="invoice_VAT" value="yes">
-                        Faktura VAT
+                        <input type="checkbox" name="invoice_VAT" value="yes"> Faktura VAT
                     </label>
                 </div>
-                <div class="radio">
-                    <label>
-                    <input type="radio"  name="payment" value="cash">
-                    Płatność gotówką
-                </label>
-                <label>
-                    <input type="radio"  name="payment" value="transfer">Płatność przelewem
-                </label>
+                <div class="col-md-6">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="payment" value="cash"> Płatność gotówką
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="payment" value="transfer">Płatność przelewem
+                        </label>
+                    </div>
                 </div>
                 <div class="">
                     <div class="form-group">
                         <label>Dane do faktury:</label>
                         <textarea class="form-control" roows="3" placeholder="wpisz dane do faktury"></textarea>
+                    </div>
                 </div>
-            </div>
         </fieldset>
-        <button type="submit">Wyślij</button>
+        <button type="submit" class="btn btn-lg btn-primary">Wyślij</button>
     </form>
 
 
