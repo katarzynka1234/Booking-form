@@ -36,31 +36,52 @@
             <legend>Szczegóły rezerwacji</legend>
             <div class="double-input">
                 <div class="form-input-container">
-                    <label for="hotelcity">Miasto:</label>
-                    <select id="hotelcity">
-                        <option value="kraków">Kraków</option>
-                        <option value="wrocław">Wrocław</option>
+                    <label for="city">Miasto:</label>
+                    <select id="city" aria-placeholder="wybierz z listy">
+                        <option disabled selected>wybierz z listy</option>
+                        <option value="gdynia">Gdynia</option>
+                        <option value="gdansk">Gdańsk</option>
+                        <option value="jelenia_gora">Jelenia Góra</option>
+                        <option value="krakow">Kraków</option>
+                        <option value="opole">Opole</option>
+                        <option value="poznan">Poznań</option>
                         <option value="warszawa">Warszawa</option>
-                        <option value="warszawa">Poznań</option>
-                        <option value="warszawa">Gdynia</option>
-                        <option value="warszawa">Gdańsk</option>
-                        <option value="warszawa">Opole</option>
-                        <option value="warszawa">Jelenia Góra</option>
+                        <option value="wrocław">Wrocław</option>
                     </select>
                 </div>
                 <div class="form-input-container">
-                    <label for="capacity">Liczba osób:</label>
-                    <input type="number" id="capacity" min="1" max="10" step="1" placeholder="max. 10" />
+                    <label for="person">Liczba osób:</label>
+                    <input type="number" id="person" min="1" max="10" step="1" placeholder="max. 10" />
                 </div>
             </div>
             <div class="double-input">
                 <div class="form-input-container date-select">
-                    <label for="start-date">Data rozpoczęcia:</label>
+                    <label for="start-date">Data przybycia:</label>
                     <input type="date" id="start-date">
                 </div>
                 <div class="form-input-container date-select">
-                    <label for="end-date">Data zakończenia:</label>
+                    <label for="end-date">Data wyjazdu:</label>
                     <input type="date" id="end-date">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Rozliczenie</legend>
+            <div class="double-input">
+                <div class="form-input-container">
+                    <input type="checkbox" name="invoice_VAT" value="yes">
+                    <span>Faktura VAT</span>
+                </div>
+                <div>
+                    <input type="radio" name="payment" value="cash">
+                    Płatność gotówką<br>
+                    <input type="radio" name="payment" value="transfer">Płatność przelewem
+                </div>
+                <div class="double-input">
+                    <div class="form-input-container">
+                        <label>Dane do faktury:</label>
+                        <textarea></textarea>
+                    </div>
                 </div>
             </div>
         </fieldset>
