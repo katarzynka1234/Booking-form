@@ -5,39 +5,40 @@
     <meta charset="UTF-8">
     <title>Booking-form</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 
 <body>
-    <form>
+    <form class="container">
         <fieldset>
             <legend>Dane osobowe</legend>
-            <div class="double-input">
-                <div class="form-input-container">
+            <div class="form-inline">
+                <div class="form-group">
                     <label for="fname">Imię:</label>
-                    <input type="text" id="fname" placeholder="wpisz imię" minlenght="3" reguired>
+                    <input type="text" class="form-control" id="fname" placeholder="wpisz imię" minlenght="3" reguired>
                 </div>
-                <div class="form-input-container">
+                <div class="form-group">
                     <label for="lname">Nazwisko:</label>
-                    <input type="text" id="lname" placeholder="wpisz nazwisko" minlenght="3" reguired>
+                    <input type="text" class="form-control" id="lname" placeholder="wpisz nazwisko" minlenght="3" reguired>
                 </div>
             </div>
-            <div class="double-input">
-                <div class="form-input-container">
+            <div class="">
+                <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" required placeholder="your email">
+                    <input type="email" class="form-control" id="email" required placeholder="your email">
                 </div>
-                <div class="form-input-container">
+                <div class="form-group">
                     <label for="phone">Telefon kontaktowy:</label>
-                    <input type="phone" id="phone" placeholder="wpisz numer +48..." required>
+                    <input type="phone" class="form-control" id="phone" placeholder="wpisz numer +48..." required>
                 </div>
             </div>
         </fieldset>
         <fieldset>
             <legend>Szczegóły rezerwacji</legend>
-            <div class="double-input">
-                <div class="form-input-container">
+            <div class="">
+                <div class="form-group">
                     <label for="city">Miasto:</label>
-                    <select id="city" aria-placeholder="wybierz z listy">
+                    <select id="city" class="form-control" aria-placeholder="wybierz z listy">
                         <option disabled selected>wybierz z listy</option>
                         <option value="gdynia">Gdynia</option>
                         <option value="gdansk">Gdańsk</option>
@@ -49,39 +50,45 @@
                         <option value="wrocław">Wrocław</option>
                     </select>
                 </div>
-                <div class="form-input-container">
+                <div class="form-group">
                     <label for="person">Liczba osób:</label>
-                    <input type="number" id="person" min="1" max="10" step="1" placeholder="max. 10" />
+                    <input type="number" class="form-control" id="person" min="1" max="10" step="1" placeholder="max. 10" />
                 </div>
             </div>
-            <div class="double-input">
-                <div class="form-input-container date-select">
+            <div class="">
+                <div class="form-group">
                     <label for="start-date">Data przybycia:</label>
-                    <input type="date" id="start-date">
+                    <input type="date" class="form-control" id="start-date">
                 </div>
-                <div class="form-input-container date-select">
+                <div class="form-group">
                     <label for="end-date">Data wyjazdu:</label>
-                    <input type="date" id="end-date">
+                    <input type="date" class="form-control" id="end-date">
                 </div>
             </div>
         </fieldset>
+
         <fieldset>
             <legend>Rozliczenie</legend>
-            <div class="double-input">
-                <div class="form-input-container">
-                    <input type="checkbox" name="invoice_VAT" value="yes">
-                    <span>Faktura VAT</span>
+            <div class="">
+                <div class="check-box">
+                    <label>
+                        <input type="checkbox"  name="invoice_VAT" value="yes">
+                        Faktura VAT
+                    </label>
                 </div>
-                <div>
-                    <input type="radio" name="payment" value="cash">
-                    Płatność gotówką<br>
-                    <input type="radio" name="payment" value="transfer">Płatność przelewem
+                <div class="radio">
+                    <label>
+                    <input type="radio"  name="payment" value="cash">
+                    Płatność gotówką
+                </label>
+                <label>
+                    <input type="radio"  name="payment" value="transfer">Płatność przelewem
+                </label>
                 </div>
-                <div class="double-input">
-                    <div class="form-input-container">
+                <div class="">
+                    <div class="form-group">
                         <label>Dane do faktury:</label>
-                        <textarea></textarea>
-                    </div>
+                        <textarea class="form-control" roows="3" placeholder="wpisz dane do faktury"></textarea>
                 </div>
             </div>
         </fieldset>
