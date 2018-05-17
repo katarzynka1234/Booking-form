@@ -1,3 +1,11 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,600,700&subset=latin-ext";
+
+$header-font: 'Lato', sans-serif;
+$bg-color:#6D214F;
+$font-color: #fff;
+$btn-color: #2C3A47;
+
+
 body {
     margin: 0;
     padding: 0;
@@ -6,5 +14,49 @@ body {
 .container {
     max-width: 700px;
     margin: 0 auto;
-    width: 80%
+    width: 80%;
+    background-color: $bg-color;
+    font-family: $header-font;
+    font-weight: 400;
+    color: $font-color;
+    padding: 20px;
+    margin-top: 40px;
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    fieldset legend {
+        color: $font-color;
+    }
+    button {
+        margin: 30px auto;
+        width:200px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: $btn-color;
+        outline: none;
+        border: none;
+        display: block;  
+        box-shadow: 0px 0px 19px 1px black;
+        text-transform: uppercase; 
+        font-weight: 600;     
+        &:hover{
+            transform: scale(1.2);
+            background-color: $btn-color;
+            color: $font-color;
+        }
+        &:focus,
+        &:active {
+            background-color: $btn-color;
+            outline: none;
+            border: none;
+            color: $font-color;
+        }     
+    }
+    .btn:active:focus {
+        outline: none;        
+    }
 }
+
