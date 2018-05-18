@@ -6,4 +6,4 @@ Simple RWD booking form template own authorship
 
 Used methods:
 > Bootstrap
-> Sass
+> SASS
