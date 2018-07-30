@@ -4,34 +4,38 @@ body {
   padding: 0;
 }
 
-.container {
+.form-area {
   max-width: 700px;
   margin: 40px auto;
   width: 80%;
-  background-color: #6D214F;
+  background-color: #c5f7f6;
+}
+
+.form-area .form-box {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  color: #fff;
+  color: #22203d;
   padding: 20px;
 }
 
-.container h1 {
+.form-area .form-box h1 {
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.container fieldset legend {
-  color: #fff;
+.form-area .form-box fieldset legend {
+  color: #22203d;
 }
 
-.container button {
+.form-area .btn-submit {
   margin: 30px auto;
   width: 200px;
   height: 50px;
   border-radius: 25px;
-  background-color: #2C3A47;
+  background-color: #b7a7a7;
+  color: #22203d;
   outline: none;
   border: none;
   display: block;
@@ -40,21 +44,37 @@ body {
   font-weight: 600;
 }
 
-.container button:hover {
+.form-area .btn-submit:hover {
   transform: scale(1.2);
-  background-color: #2C3A47;
-  color: #fff;
+  background-color: #b7a7a7;
+  color: #22203d;
 }
 
-.container button:focus, .container button:active {
-  background-color: #2C3A47;
+.form-area .btn-submit:focus, .form-area .btn-submit:active {
+  background-color: #b7a7a7;
   outline: none;
   border: none;
-  color: #fff;
+  color: #22203d;
 }
 
-.container .btn:active:focus {
+.form-area .btn:active:focus {
   outline: none;
+}
+
+.form-area input.valid, .form-area select.valid, .form-area textarea.valid {
+  border: 2px solid #1b561a;
+}
+
+.form-area input.invalid, .form-area select.invalid, .form-area textarea.invalid {
+  border: 2px solid #c62b2b;
+}
+
+.form-area .ok {
+  color: #1b561a;
+}
+
+.form-area .nok {
+  color: #c62b2b;
 }
 
 /*# sourceMappingURL=style.css.map */
