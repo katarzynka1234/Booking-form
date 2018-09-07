@@ -11,7 +11,7 @@ $(document).ready(function () {
         }
         else {
             input.removeClass('valid').addClass('invalid');
-            input.next('.comment').text('Wprowadz poprawne dane.').removeClass('ok').addClass('nok')
+            input.next('.comment').text('Wprowadz poprawne dane.').removeClass('ok').addClass('nok');
         }
     });
 
@@ -26,7 +26,7 @@ $(document).ready(function () {
         }
         else {
             input.removeClass('valid').addClass('invalid');
-            input.next('.comment').text('Wpisz poprawne dane.').removeClass('ok').addClass('nok')
+            input.next('.comment').text('Wpisz poprawne dane.').removeClass('ok').addClass('nok');
         }
     });
 
@@ -140,4 +140,4 @@ $(document).ready(function () {
     });
 
 
-})
+});
